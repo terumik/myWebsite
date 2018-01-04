@@ -1,0 +1,523 @@
+/*
+Small(Base)
+Medium
+Large
+*/
+
+/* Small */
+main{
+  margin: 0 auto;
+  height: 600px;
+}
+aside p{
+  font-size: 1.2rem;
+  color: #e3e4e6;
+  line-height: 1.5rem;
+}
+
+#hasky{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  top: -20rem;
+}
+
+/* FACE */
+#face{
+  position: relative;
+  margin: 0 auto;
+  width: 200px; 
+  height: 60px;
+  background-color: #dfdfdf;
+  transform: rotate(90deg);
+  z-index: 1;
+  animation: animate-face 10s infinite linear;
+  cursor: -webkit-grab;
+}
+#face::before,
+#face::after{
+  content: "";
+  position: absolute;
+  border-left: 140px solid transparent;
+  border-right: 60px solid transparent;
+}
+#face::before{
+  bottom: 100%;
+  border-bottom: 60px solid #707070;
+  left: 0;
+}
+#face::after{
+  top: 100%;
+  border-top: 60px solid #707070;
+  left: 0;
+}
+#head{
+  position: relative;
+}
+#head::before{
+  content: "";
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 100px solid #707070;
+  top: -20px;
+  left: 20px;
+  transform: rotate(90deg);
+}
+
+/* EARS */
+#ears{
+  position: relative;
+}
+#ears::before,
+#ears::after{
+  content: "";
+  position: absolute;
+  border-left: 80px solid transparent;
+  border-right: 70px solid transparent;
+  left: -60px;
+}
+#ears::before{
+  border-bottom: 50px solid #5c5c5c;
+  top: 60px;
+  animation: animate-ear-l 8s infinite linear;
+}
+#ears::after{
+  border-top: 50px solid #5c5c5c;
+  top: -50px;
+  z-index: -1;
+  animation: animate-ear-r 8s infinite linear;
+}
+/* EYES */
+div[id^="eye"]{
+  position: absolute;
+  height: 30px;
+  width: 25px;
+  border-radius: 100%;
+  background-color: #0069a7;
+  left: 90px;
+  z-index: 1;
+  border: #383838 solid 5px;
+}
+#eye-r{
+  top: -20px;
+  animation: animate-eye-r 8s infinite linear;
+}
+#eye-l{
+  top: 50px;
+  animation: animate-eye-l 8s infinite linear;
+}
+div[id^="eye"]::before{
+  content: "";
+  position: absolute;
+  border-left: 2px solid #e7e7e7;
+  border-right: 2px solid #dadada;
+  left: 2px;
+  border-radius: 50%;
+  border-bottom: 4px solid;
+  top: 10px;
+}
+/* NOSE */
+#nose{
+  position: relative;
+  height: 20px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: #202020;
+  top: 20px;
+  left: 140px;
+  animation: animate-nose 8s infinite linear;
+}
+#nose-line{
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  background-color: #202020;
+  left: 145px;
+  top: 28.5px;
+}
+#nose-line::before,
+#nose-line::after{
+  content: "";
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  top: -4px;
+}
+#nose-line::before{
+  border-bottom: 10px solid  #202020;
+  transform: rotate(-90deg);
+  left: 4px;
+}
+#nose-line::after{
+  border-top: 10px solid #cf8d98;
+  transform: rotate(90deg);
+  left: 6px;
+  z-index: 1;
+  border-radius: 40%;
+}
+
+/* TONGUE */
+#tongue{
+  position: absolute;
+  height: 27px;
+  width: 15px;
+  border-right: 8px solid #db9191; 
+  border-radius: 50%;
+  top: 16px;
+  left: 162px;
+}
+
+/* HIDE TONGUE */
+#hide-tongue{
+  position: absolute;
+  left: 134.2px;
+  top: 23.5px;
+}
+#hide-tongue::before,
+#hide-tongue::after{
+  content: "";
+  position: absolute;
+  border-left: 31px solid transparent;
+  border-right: 31px solid transparent;
+  top: -4px;
+}
+#hide-tongue::after{
+  border-top: 20px solid #dfdfdf; 
+  /* dfdfdf */
+  transform: rotate(90deg);
+  left: 6px;
+  z-index: 1;
+  border-radius: 40%;
+}
+
+/* BODY */
+#body{
+  position: relative;
+  margin: 0 auto;
+  top: 20px;
+  width: 250px;
+  border-bottom: 300px solid #cacaca;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-radius: 30%;
+  cursor: -webkit-grab;
+}
+div[id^="leg"]{
+  position: absolute;
+  height: 220px;
+  width: 60px;
+  background-color: #707070;
+  background: linear-gradient(#cacaca, #383838);
+  border-radius: 25%;
+  top: 95px;
+  z-index: 2;
+}
+#leg-r{
+  left: 55px;
+  animation: animate-leg-r 5s infinite linear;
+}
+#leg-l{
+  left: -25px;
+  animation: animate-leg-l 5s infinite linear;
+}
+#paw-l, #paw-r{
+  opacity: 0;
+}
+.digital{
+  position: relative;
+  background: #cf8d98;
+  width: 30px;
+  height: 20px;
+  border-radius: 50%;
+  top: 53px;
+  left: 15px;
+}
+.carpal{
+  background: #cf8d98;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+}
+.carpal-wrapper{
+  position: relative;
+  transform: rotate(90deg);
+  top: 90px;
+}
+
+div[id^="back"]{
+  position: absolute;
+  height: 180px;
+  width: 140px;
+  background-color: #cacaca;
+  border-radius: 48%;
+  top: 130px;
+  z-index: 1;
+}
+#back-r{
+  left: 25px;
+}
+#back-l{
+  left: -75px;
+}
+#tail{
+  position: relative;
+  margin: 0 auto;
+  height: 200px;
+  width: 180px;
+  background-color: transparent;
+  border-right: solid #707070 60px;
+  border-radius: 50%;
+  top: -250px;
+  left: 70px;
+  transform: rotate(20deg);
+  cursor: -webkit-grab;
+  animation: animate-tail 3s infinite linear;
+}
+
+/* HOVER DETECTION */
+#head-detection{
+  position: relative;
+  margin: 0 auto;
+  width: 60px;
+  height: 50px;
+  background: transparent;
+  top: 210px;
+  z-index: 2;
+  cursor: -webkit-grab;
+}
+#neck-detection{
+  position: relative;
+  margin: 0 auto;
+  width: 110px;
+  height: 60px;
+  background: transparent;
+  top: 360px;
+  z-index: 2;
+  cursor: -webkit-grab;
+}
+#tail-detection{
+  position: relative;
+  margin: 0 auto;
+  width: 50px;
+  height: 170px;
+  background: transparent;
+  top: 310px;
+  left: 150px;
+  transform: rotate(15deg);
+  border-radius: 40%;
+  z-index: 2;
+  cursor: -webkit-grab;
+}
+
+/* ANIMATIONS */
+@keyframes animate-ear-l {
+  0%  { transform: rotate(-20deg);}
+  25% { transform: rotate(-13deg);}
+  30% { transform: rotate(-18deg);}
+  50% { transform: rotate(-20deg);}
+  75% { transform: rotate(-18deg);}
+	100%{ transform: rotate(-20deg);}
+}
+@keyframes animate-ear-r {
+	0%  { transform: rotate(20deg);}
+	25% { transform: rotate(18deg);}
+  55% { transform: rotate(20deg);}
+  60% { transform: rotate(13deg);}
+  65% { transform: rotate(20deg);}
+  75% { transform: rotate(18deg);}
+	100%{ transform: rotate(20deg);}
+}
+@keyframes animate-face {
+  0%  { transform: rotate(90deg); top: 0px;}
+  10% { top: 2px;}
+  20% { top: 0px;}
+  30% { top: 2px;}
+  40% { top: 0px;}
+  50% { top: 2px;}
+  60% { transform: rotate(92deg); top: 0px;}
+  65% { transform: rotate(87deg);}  
+  70% { transform: rotate(92deg); top: 2px;}
+  80% { transform: rotate(92deg); top: 0px;}
+  90% { transform: rotate(92deg); top: 2px;}
+	100%{ transform: rotate(90deg); top: 0px;}
+}
+@keyframes animate-eye-r {
+  0% { transform: scaleX(1) skew(10deg);}
+  59% { transform: scaleX(1) skew(10deg);}
+  60% { transform: scaleX(0.1) skew(10deg);} 
+  61% { transform: scaleX(1) skew(10deg);}
+  100% { transform: scaleX(1) skew(10deg);}  
+}
+@keyframes animate-eye-l {
+  0% { transform: scaleX(1) skew(-10deg);}
+  59% { transform: scaleX(1) skew(-10deg);}
+  60% { transform: scaleX(0.1) skew(-10deg);} 
+  61% { transform: scaleX(1) skew(-10deg);}
+  100% { transform: scaleX(1) skew(-10deg);}  
+}
+@keyframes animate-nose {
+	0%  { left: 140px;}
+  5% { left: 139px;}
+  10% { left: 140px;}
+  100%{ left: 140px;}
+}
+@keyframes animate-leg-r {
+  70% { top: 95px ;}
+  75% { top: 100px ;} 
+  80% { top: 95px ;}
+}
+@keyframes animate-leg-l {
+  60% { top: 95px ;}
+  65% { top: 100px ;} 
+  70% { top: 95px ;}
+}
+@keyframes animate-tail {
+	0%  { transform: rotate(20deg); transform-origin: bottom;}
+	25% { transform: rotate(15deg); transform-origin: bottom;}
+  50% { transform: rotate(20deg); transform-origin: bottom;}
+  75% { transform: rotate(15deg); transform-origin: bottom;}
+	100%{ transform: rotate(20deg); transform-origin: bottom;}
+}
+
+
+/* HOVER ACTIONS */
+/* HOVER FOREHEAD AND NECK */
+#head-detection:hover ~ #face > #ears::before,
+#neck-detection:hover ~ #face > #ears::before
+{
+  animation: move-ear-l 3s infinite linear;  
+}
+#head-detection:hover ~#face > #ears::after,
+#neck-detection:hover ~#face > #ears::after
+{
+  animation: move-ear-r 3s infinite linear;  
+}
+#head-detection:hover ~ #tail,
+#neck-detection:hover ~ #tail
+{
+  animation: wave-tail 2s infinite linear;  
+}
+
+
+/* HOVER NOSE */
+#nose:hover{
+  animation: hover-nose 1s infinite linear;  
+}
+
+/* CLOSE EYES */
+#nose:hover ~ #eye-r, 
+#neck-detection:hover ~ #face > #eye-r,
+#tail-detection:hover ~ #face > #eye-r{
+  animation: close-eye-r 10s infinite;
+}
+#nose:hover ~ #eye-l, 
+#neck-detection:hover ~ #face > #eye-l,
+#tail-detection:hover ~ #face > #eye-l
+{
+  animation: close-eye-l 10s infinite;
+}
+#nose:hover ~ div[id^="eye"]::before,
+#neck-detection:hover ~ #face > div[id^="eye"]::before,
+#tail-detection:hover ~ #face > div[id^="eye"]::before
+{
+  border: #202020;
+}
+
+/* SHOW TONGHE */
+#hide-tongue:hover,
+#neck-detection:hover ~ #face > #hide-tongue,
+#nose:hover ~ #hide-tongue {
+  animation: show-tongue 0.5s infinite;
+}
+
+/* HOVER LEGS */
+#leg-r:hover{
+  height: 130px;
+  transition: 1s;
+}
+#leg-r:hover > #paw-r{
+  opacity: 1;
+  transition: 0.8s;
+  transition-delay: 0.7s;
+}
+#leg-l:hover{
+  height: 130px;
+  transition: 1s;
+}
+#leg-l:hover > #paw-l{
+  opacity: 1;
+  transition: 0.8s;
+  transition-delay: 0.7s;
+}
+
+/* HOVER TAIL */
+#tail-detection:hover ~ #tail{
+  animation-play-state: paused;
+}
+#tail-detection:hover ~ #face > #ears::before,
+#tail-detection:hover ~ #face > #ears::after{
+  animation-play-state: paused;
+} 
+
+/* HOVER ANIMATIONS */
+@keyframes move-ear-r {
+	0%  { transform: rotate(27deg);}
+	25% { transform: rotate(36deg);}
+  55% { transform: rotate(37deg);}
+  60% { transform: rotate(30deg);}
+  65% { transform: rotate(37deg);}
+  75% { transform: rotate(37deg);}
+	100%{ transform: rotate(25deg);}
+}
+@keyframes move-ear-l {
+  0%  { transform: rotate(-27deg);}
+  25% { transform: rotate(-36deg);}
+  30% { transform: rotate(-37deg);}
+  50% { transform: rotate(-30deg);}
+  75% { transform: rotate(-37deg);}
+	100%{ transform: rotate(-25deg);}
+}
+@keyframes hover-nose{
+	0%  { left: 141px;}
+  50% { left: 140px;}
+  51% { left: 141px;}
+  100%{ left: 141px;}
+}
+@keyframes close-eye-r{
+  0%  { transform: scaleX(0.5) skew(30deg); background: #383838;}
+  100% { transform: scaleX(0.5) skew(30deg); background: #383838;}
+}
+@keyframes close-eye-l{
+	0%  { transform: scaleX(0.5) skew(-30deg); background: #383838}
+  100% { transform: scaleX(0.5) skew(-30deg); background: #383838;}
+}
+@keyframes show-tongue{
+	0%   { opacity: 1;}
+	25%   { opacity: 0.6;}
+	50%   { opacity: 0.3;}
+  100% { opacity: 0;}
+}
+@keyframes wave-tail {
+	0%  { transform: rotate(60deg); transform-origin: bottom;}
+  25% { transform: rotate(0deg); transform-origin: bottom;}
+  50% { transform: rotate(60deg); transform-origin: bottom;}
+  75% { transform: rotate(0deg); transform-origin: bottom;}
+	100%{ transform: rotate(60deg); transform-origin: bottom;}
+}
+
+
+
+/*Medium*/
+@media all and (min-width: 426px) {
+  #hasky{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    top: -25rem;
+  }
+}
+
+
+

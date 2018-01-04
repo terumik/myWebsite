@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Terumi Kusaka | Full-Stack Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <!-- HEADER SECTION -->
+    <header>
+      <h1 class="hidden">Terumi Kusaka, Full-Stack Web Developer</h1>
+      <img class="header-logo display-s" src="img/logo-s.png" alt="Golden square logo with name of the web developer, Terumi Kusaka.">
+      <img class="header-logo-large display-m" src="img/logo.png" alt="Golden square logo with name of the web developer, Terumi Kusaka.">
+      <div class="logo-title serif small">FULL-STACK WEB DEVELOPER</div>
+      <a class="button" href="#works">View Works</a>
+      <div class="language small">
+        <a href="index.html">ENG</a> | <a href="jpn/index.html">JPN</a>
+      </div>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="nav-bar small">
+      <h2 class="hidden">Main Navigation</h2>
+      <div class="nav-logo display-l">
+        <a href="index.html">TK</a>
+      </div>
+      <ul>
+        <li>
+          <a href="index.html">
+              <i class="fa fa-home" aria-hidden="true"></i>HOME
+            </a>
+        </li>
+        <li>
+          <a href="about.html">
+              <i class="fa fa-user" aria-hidden="true"></i>ABOUT
+            </a>
+        </li>
+        <li>
+          <a href="#works">
+              <i class="fa fa-code" aria-hidden="true"></i>WORKS
+            </a>
+        </li>
+        <li>
+          <a href="http://google.com">
+              <i class="fa fa-pencil-square" aria-hidden="true"></i>BLOG
+            </a>
+        </li>
+        <li>
+          <a href="#contact">
+              <i class="fa fa-envelope" aria-hidden="true"></i>CONTACT
+            </a>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <section id="works">
+        <h2>WORKS</h2>
+        <div class="sort-works">
+          <ul>
+            <li id="sort-all" tabindex="0">ALL</li>
+            <li id="sort-frontend" tabindex="0">Front-end</li>
+            <li id="sort-backend" tabindex="0">Back-end</li>
+          </ul>
+        </div>
+        <div class="flex-container">
+          <div class="display">
+            <a href="#"><img src="img/SeasoningShack.jpg" alt="Thumbnail of sample work 1"></a>
+            <a href="#">
+              <div class="work-description">
+                <h3>Seasoning Shack</h3>
+                <div>
+                  <ul>
+                    <li>HTML</li>
+                    <li>Bootstrap</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                  </ul>
+                  <ul>
+                    <li>MVC5</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <div class="decolation-line display-s"></div>
+          </div>
+
+          <div class="display">
+            <a href="#"><img src="img/placeholderL-dark.png" alt="Thumbnail of sample work 2"></a>
+            <a href="#">
+              <div class="work-description">
+                <h3>Kirkland District Hospital</h3>
+                <div>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <div class="decolation-line display-s"></div>
+          </div>
+
+          <div class="display">
+            <a href="#"><img src="img/placeholderL-dark.png" alt="sample work 1"></a>
+            <a href="#">
+              <div class="work-description">
+                <h3>Kirkland District Hospital</h3>
+                <div>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <div class="decolation-line display-s"></div>
+          </div>
+
+          <div class="display">
+            <a href="#"><img src="img/placeholderL-light.png" alt="sample work 1"></a>
+            <a href="#">
+              <div class="work-description">
+                <h3>Study Manager</h3>
+                <div>
+                  <ul>
+                    <li>HTML</li>
+                    <li>Bootstrap</li>
+                    <li>C#</li>
+                    <li>SQL</li>
+                  </ul>
+                  <ul>
+                    <li>MVC5</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <div class="decolation-line display-s"></div>
+          </div>
+
+          <div class="display">
+            <a href="#"><img src="img/placeholderL-dark.png" alt="sample work 1"></a>
+            <a href="#">
+              <div class="work-description">
+                <h3>Kirkland District Hospital</h3>
+                <div>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                  </ul>
+                </div>
+              </div>
+            </a>
+            <div class="decolation-line display-s"></div>
+          </div>
+          <div class="display">
+            <!-- new item here -->
+          </div>
+        </div>
+
+        <a class="button" href="#works">View More Works</a>
+      </section>
+
+      <section id="contact">
+        <h2>CONTACT</h2>
+        <form class="contact-form" action="index.html" method="post">
+          <div>
+            <label for="name">NAME:</label>
+            <input id="name" type="text" name="name" placeholder="Enter your name..." />
+          </div>
+          <div>
+            <label for="email">EMAIL:</label>
+            <input id="email" type="email" name="email" placeholder="jhon@example.com" />
+          </div>
+          <div>
+            <label for="message">MESSAGE:</label>
+            <textarea id="message" name="message" placeholder="Your message..."></textarea>
+          </div>
+          <div>
+            <button class="button" id="submit" type="submit" name="submit">SUBMIT</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <h2 class="hidden">Footer</h2>
+      <div class="decolation-line"></div>
+      <aside>
+        <h3 class="hidden">Social Media Links</h3>
+        <ul>
+          <li>
+            <a href="https://github.com/terumik/">
+              <div class="social-icon">
+                <i class="fa fa-github-alt" aria-hidden="true"></i>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/tkusaka/">
+              <div class="social-icon">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <nav class="footer-nav">
+        <h3 class="hidden">Footer Contents</h3>
+        <ul class="small">
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="http://google.com">BLOG</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <small class="small">&copy;2017 Terumi Kusaka. All rights reserved.</small>
+    </footer>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

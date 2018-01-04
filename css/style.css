@@ -1,0 +1,498 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Marcellus+SC');
+
+/*
+Small(Base)
+  S-General
+  S-HEADER
+  S-NAV
+  S-Works
+  S-Contact
+  S-Footer
+  Hide When Small
+Medium
+  M-General
+  M-NAV
+  M-Works
+  M-Contact
+Large
+  L-HEADER
+  L-Nav
+  L-Works
+  L-Contact
+*/
+
+/*     Small(Base Style)      */
+/*S-General*/
+html{
+  box-sizing: border-box;
+  font-size: 10px;
+}
+*, *:before, *:after{
+  box-sizing:inherit;
+}
+body{
+  background-color: #061626;
+  font-family: 'Josefin Sans', 'Century Gothic', sans-serif;
+  color: #CEBC8A;
+  letter-spacing: 0.18rem;
+  text-align: center;
+}
+*::selection{
+  color: #faffdb;
+  background-color: #8c1329;
+}
+.serif{
+  font-family: 'Marcellus SC', Georgia, serif;
+}
+.page-wrapper{
+  min-width: 310px;
+  padding: 40px 10px 60px 10px;
+  margin: 0 auto;
+}
+.hidden{
+  position: absolute;
+  left: -10000px;
+}
+h2{
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  letter-spacing: 0.4em;
+}
+h3{
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+li{
+  list-style: none;
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+  color: #061626;
+}
+a:hover, a:focus{
+  transition: 0.3s;
+}
+.button{
+  display: block;
+  margin: 0 auto;
+  font-size: 1.4em;
+  font-weight: bold;
+  background-color: #CEBC8A;
+  width: 18rem;
+  line-height: 35px;
+  border-radius: 4px;
+  box-shadow: 0px 5px 5px #111;
+  position: relative;
+}
+.button:hover{
+  top: 1px;
+  opacity: 0.8;
+  box-shadow: 0px 2px 2px #111;
+  transition: all 1s ease;
+}
+section{
+  margin-top:15rem;
+  padding-top:5rem;
+}
+/*S-HEADER*/
+.header-logo{
+  display: block;
+  margin: 0 auto;
+}
+.logo-title{
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  letter-spacing: 0.1em;
+}
+.language{
+  margin-top: 1.5rem;
+}
+.language a{
+  color: #e3e4e6;
+}
+.language a:hover, .language a:focus{
+  color: #b84943;
+  font-weight: bold;
+}
+/*S-NAV*/
+.nav-bar{
+  letter-spacing: 0.1em;
+  background-color: #CEBC8A;
+  height: 35px;
+  width: 100%;
+  min-width: 320px;
+  z-index: 10;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  margin-left: 0px;
+  bottom: 0px;
+  line-height: 1.2em;
+  border-top: solid 1px #e3e4e6;
+}
+.nav-bar i{
+  display: block;
+  font-size: 2.4rem;
+}
+.nav-bar a{
+  display: block;
+  width: 57px;
+  position: relative;
+}
+.nav-bar a:hover, .nav-bar a:focus{
+  color: #b84943;
+  transition: 0.3s;
+  top: 1px;
+}
+/*S-Works*/
+.sort-works li{
+  font-size: 1.2rem;
+  width: 32%;
+  position: relative;
+  cursor: pointer;
+}
+.sort-works li::before{
+  position: absolute;
+  top: 1em;
+  left: 0;
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #b84943;
+  transition: 1s;
+}
+.sort-works li:hover::before, .sort-works li:focus::before{
+  width: 100%;
+}
+.display img{
+  display: block;
+  margin: 3.5rem auto 2rem auto;
+}
+.work-description h3{
+  color: #cebc8a;
+  line-height: 1.8rem;
+}
+.work-description li{
+  font-size: 1.2rem;
+  color: #e3e4e6;
+  line-height: 1.5em;
+}
+.decolation-line{
+  width: 10rem;
+  border-top:solid 2px #b84943;
+  margin: 2rem auto 4rem auto;
+}
+/*S-Contact*/
+#contact{
+  margin-bottom: 14.5rem;
+}
+#contact div{
+  margin-bottom: 2rem;
+}
+#contact label{
+  font-size: 1.2rem;
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+#contact input, textarea{
+  width: 100%;
+  height: 4rem;
+  font-size: 1.4rem;
+  color: #061626;
+  background-color: #f4f5f0;
+  padding: 5px 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.15em;
+  line-height: 1.5em;
+  font-weight: bolder;
+  border: none;
+  outline: none;
+}
+#contact input:focus,textarea:focus{
+  border: none;
+  outline: none;
+  border-bottom: solid 4px #b84943;
+}
+#contact textarea{
+  height: 15rem;
+  margin-bottom: 1rem;
+}
+::-webkit-input-placeholder{
+  color: #bebab0;
+  font-weight: normal;
+}
+:-moz-placeholder{
+  color: #bebab0;
+  opacity: 1;
+  font-weight: normal;
+}
+::-moz-placeholder{
+  color: #bebab0;
+  opacity: 1;
+  font-weight: normal;
+}
+:-ms-input-placeholder{
+  color: #bebab0;
+  font-weight: normal;
+}
+::-ms-input-placeholder{
+  color: #bebab0;
+  font-weight: normal;
+}
+#submit{
+  font-family: 'Josefin Sans', sans-serif;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+/*S-Footer*/
+footer .decolation-line{
+  border-top:solid 3px #cebc8a;
+}
+footer aside{
+  height: 4.2rem;
+}
+aside li{
+  font-size: 2.4rem;
+  width: 4.2rem;
+  margin-right: 15%;
+}
+aside li:last-child{
+  margin-right: 0;
+}
+.social-icon i{
+  line-height: 4.2rem;
+  color: #cebc8a;
+}
+.social-icon:hover, footer aside a:focus .social-icon{
+  height: 4.2rem;
+  background-color: #b84943;
+  transition: 0.3s;
+}
+.footer-nav li{
+  margin: 2rem 4% 5.5rem 4%;
+}
+.footer-nav li a{
+  color: #cebc8a;
+}
+.footer-nav li a:hover, .footer-nav li a:focus{
+  font-weight: bold;
+}
+.footer-nav li:first-child{
+  margin-left: 0;
+}
+.footer-nav li:last-child{
+  margin-right: 0;
+}
+/*Hide When Small*/
+@media all and (max-width:425px) {
+  .display-m, .display-l{
+    display: none;
+  }
+}
+/*Medium*/
+@media all and (min-width: 426px) {
+/*M-General*/
+  html{
+    font-size: 12px;
+  }
+  .page-wrapper{
+    max-width: 750px;
+    padding: 150px 20px 60px 20px;
+    margin: 0 auto;
+  }
+  .button{
+    line-height: 45px;
+  }
+  .display-s, .display-l{
+    display: none;
+  }
+  /*M-NAV*/
+  .nav-bar{
+    height: 45px;
+  }
+  .nav-bar li{
+    width: 18%;
+    font-size: 0.71rem;
+  }
+  .nav-bar i{
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 2rem;
+  }
+  .nav-bar a{
+    margin: 0 auto;
+  }
+  /*M-Works*/
+  .sort-works li{
+    width: 31%;
+    margin-bottom: 4rem;
+  }
+  .display img{
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    margin: 1em auto 0 auto;
+  }
+  .work-description{
+    display: inline-block;
+    vertical-align: middle;
+    width: 47.5%;
+    text-align: left;
+  }
+  .work-description ul{
+    margin-bottom: 1em;
+  }
+  .work-description ul:last-child{
+    margin-bottom: 0;
+  }
+  .work-description>* {
+    border-left: 2px solid #b84943;
+    padding-left: 10px;
+    margin: 10% auto auto 10%;
+  }
+  #works .button{
+    margin-top: 6rem;
+  }
+  /*M-Contact*/
+  #contact{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*Large*/
+@media all and (min-width: 769px) {
+  html{
+    font-size: 14px;
+  }
+  .page-wrapper{
+    max-width:1000px;
+  }
+  .display-s, .display-m{
+    display: none;
+  }
+  .display-l{
+    display: inline-block;
+  }
+  section{
+    margin-top:12rem;
+    padding-top:8rem;
+  }
+  /*L-HEADER*/
+  .header-logo-large{
+    display: inline-block;
+  }
+  /*L-Nav*/
+  .nav-bar{
+    height: 50px;
+    top: 0px;
+    padding-left: 2%;
+    padding-right: 2%;
+    border: none;
+  }
+  .nav-bar i, .nav-bar li:first-child{
+    display: none;
+  }
+  .nav-bar ul{
+    float: right;
+  }
+  .nav-bar li{
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 50px;
+    width: 120px;
+    position: relative;
+  }
+  .nav-bar li::before{
+    position: absolute;
+    top: 46px;
+    left: 0;
+    content: "";
+    width: 0;
+    height: 4px;
+    background: #b84943;
+    transition: 1s;
+  }
+  .nav-bar li:hover::before{
+    width: 100%;
+  }
+  .nav-bar a{
+    display: block;
+    width: 120px;
+    letter-spacing: 0.2rem;
+  }
+  .nav-logo{
+    display: inline-block;
+  }
+  .nav-logo{
+    background-color: #061626;
+    float: left;
+    margin: 4px auto auto 20px;
+  }
+  .nav-logo>a{
+    color: #cebc8a;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 45px;
+    letter-spacing: -1px;
+    height: 40px;
+    width: 40px;
+  }
+  .nav-logo a:hover, .nav-logo a:focus{
+    background-color: #b84943;
+    color: #cebc8a;
+    top: 0;
+  }
+  /*L-Works*/
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .display{
+    width: 300px;
+    height: 300px;
+    margin: 1% auto;
+    position: relative;
+  }
+  .display img{
+    width: 100%;
+  }
+  .display:hover .work-description, .display a:focus .work-description{
+    height: 100%;
+  }
+
+  .work-description{
+    width: 300px;
+    height: 0;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background-color: #061626;
+    opacity: 0.9;
+    transition: all 1.8s ease;
+    overflow: hidden;
+  }
+  .work-description h3, .work-description>div{
+    margin-left: 20px;
+  }
+  /*L-Contact*/
+  #contact form{
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+  }
+  #contact input{
+    width: 70%;
+  }
+}
